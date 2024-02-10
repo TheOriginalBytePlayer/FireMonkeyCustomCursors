@@ -272,9 +272,12 @@ end;
 
 destructor TCustomCursor.Destroy;
 begin
-  FCursor.release;
-  FImage.release;
-  CFRelease(FImgSourceRef);
+  if assigned(FCursor) then 
+    FCursor.release;
+  if assigned(FImage) then 
+     FImage.release;
+  if assigned(FImgSourceRef) then
+     CFRelease(FImgSourceRef);
 //KJS ADDDED
 //  inherited destroy;
 end;
