@@ -14,7 +14,7 @@ unit FMX.CustomCursors.Win;
 interface
 uses
   System.SysUtils, System.Types, System.UITypes, System.Rtti, System.Classes,
-  System.IOUtils, System.Variants, FMX.Platform.win;
+  System.IOUtils, System.Variants, FMX.Platform.win, FMX.Types,Winapi.Windows;
 
 Type
   TCustomCursorPlatformWin = class(TInterfacedObject, IFMXCursorService)
